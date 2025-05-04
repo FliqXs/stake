@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="icon" type="image/png" href="resources\1111.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stake Code Claimer</title>
+</head>
+<body>
+    <div class="header">
+        <div class="column1">
+            <div id="sendMessage" contenteditable="false"></div>
+            <div class="row-container">
+                <button id="connectButton">Connect</button>
+                <button id="disconnectButton" class="hidden">Disconnect</button>
+            </div>
+            <div class="row-container">
+                <label for="stakeSelector">Stake Domain:</label>
+                <select id="stakeSelector">
+                    <option value="stake.com">Stake.com</option>
+                    <option value="stake.ac">Stake.ac</option>
+                    <option value="stake.games">Stake.games</option>
+                    <option value="stake.bet">Stake.bet</option>
+                    <option value="stake.pink">Stake.pink</option>
+                    <option value="stake.mba">Stake.mba</option>
+                    <option value="stake.jp">Stake.jp</option>
+                    <option value="stake.bz">Stake.bz</option>
+                    <option value="staketr.com">Staketr.com</option>
+                    <option value="stake.ceo">Stake.ceo</option>
+                    <option value="stake.krd">Stake.krd</option>
+                    <option value="stake.blue">Stake.blue</option>
+                    <option value="stake.coach">Stake.coach</option>
+                    <option value="stake.horse">Stake.horse</option>
+                    <option value="stake.mg">Stake.mg</option>
+                    <option value="stake.pet">stake.pet</option>
+                    <option value="stake1001.com">stake1001.com</option>
+                    <option value="stake1002.com">stake1002.com</option>
+                    <option value="stake1003.com">stake1003.com</option>
+                    <option value="stake1004.com">stake1004.com</option>
+                    <option value="stake1018.com">stake1018.com</option>
+                    <option value="stake1019.com">stake1019.com</option>
+                    <option value="stake1020.com">stake1020.com</option>
+                    <option value="stake1021.com">stake1021.com</option>
+                    <option value="stake1022.com">stake1022.com</option>
+                    <option value="stake1023.com">stake1023.com</option>
+                    <option value="stake1033.com">stake1033.com</option>
+                    <option value="stake1034.com">stake1034.com</option>
+                    <option value="stake1035.com">stake1035.com</option>
+                    <option value="stake1036.com">stake1036.com</option>
+                    <option value="stake1037.com">stake1037.com</option>
+                    <option value="stake1038.com">stake1038.com</option>
+                    <option value="stake1039.com">stake1039.com</option>
+                    <option value="stake1040.com">stake1040.com</option>
+                    <option value="stakeru8.com">stakeru8.com</option>
+                    <option value="stakeru9.com">stakeru9.com</option>
+                    <option value="stake.us">Stake.us</option>
+                </select>
+            </div>
+            <div class="row-container">
+                <label for="cryptoSelector">Crypto Type:</label>
+                <select id="cryptoSelector">
+                    <option value="trx">TRX</option>
+                    <option value="btc">BTC</option>
+                    <option value="eth">ETH</option>
+                    <option value="ltc">LTC</option>
+                    <option value="usdt">USDT</option>
+                    <option value="doge">DOGE</option>
+                    <option value="bch">BCH</option>
+                    <option value="xrp">XRP</option>
+                    <option value="eos">EOS</option>
+                    <option value="bnb">BNB</option>
+                    <option value="usdc">USDC</option>
+                    <option value="ape">APE</option>
+                    <option value="busd">BUSD</option>
+                    <option value="cro">CRO</option>
+                    <option value="dai">DAI</option>
+                    <option value="link">LINK</option>
+                    <option value="sand">SAND</option>
+                    <option value="shib">SHIB</option>
+                    <option value="sol">SOL</option>
+                    <option value="uni">UNI</option>
+                    <option value="matic">MATIC</option>
+                    <option value="trump">TRUMP</option>
+                    <option value="brl">BRL</option>
+                    <option value="idr">IDR</option>
+                    <option value="inr">INR</option>
+                    <option value="jpy">JPY</option>
+                    <option value="cad">CAD</option>
+                    <option value="gold">GOLD (US)</option>
+                    <option value="sweeps">SWEEPS (US)</option>
+                </select>
+            </div>
+            <div>
+                <input type="checkbox" id="autorecon" checked>
+                <label for="autorecon">Auto Reconnect</label>
+            </div>
+            <div id="versionInfo" style="margin-top: 10px; font-size: 12px; color: gray;">
+                Version: Loading...
+            </div>
+        </div>
+        <div class="column2">
+            <span id="connectionStatus"></span>
+            <span id="111"></span>
+            <span id="112"></span>
+            <div id="myProgress">
+                <div id="myBar"></div>
+            </div>
+            <span id="113"></span>
+            <span id="114"></span>
+            <div>
+                <input type="checkbox" id="toggleBackgroundCheckbox">
+                <label for="toggleBackgroundCheckbox">Hey Eddie, are you here?</label>
+            </div>
+        </div>
+        <div class="column3">
+            <label id="manuelsend">Manual Claim</label>
+            <div class="row-container">
+                <input type="text" id="bonusCodeInput" placeholder="Bonus Code">
+                <button id="sendBonusCode">Send</button>
+            </div>
+            <label id="buyorexl" style="color: rgb(17, 255, 0);">Buy or Extend Subscription</label>
+            <button id="buyorex">🛒 Buy or Extend 🛒</button>
+        </div>
+        <div class="column4">
+            <div id="updateContainer" style="display: none;">
+                <p id="updateMessage"></p>
+                <button id="updateButton">Download New Version</button>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="left">
+            <div class="row-container1" style="border: 1px solid #ad7171; padding: 10px; border-radius: 5px;">
+                <label>At least one of those checkboxes must be checked to claim codes. (Recomended to keep both checked)</label>
+                <div>
+                    <input type="checkbox" id="openUrlCheckbox" checked>
+                    <label for="openUrlCheckbox">Claim codes in new tab</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="openextabCheckbox" checked>
+                    <label for="openextabCheckbox">Claim codes in existing tab</label>
+                </div>
+            </div>
+            <div class="row-container" style="border: 1px solid #ad7171; padding: 10px; border-radius: 5px;">
+                <div>
+                    <input type="checkbox" id="reload">
+                    <label for="reload" id="reloadLabel"> Claim Reload</label>
+                </div>
+                <div>
+                <input type="checkbox" id="reloadtovault">
+                <label for="reloadtovault" id="reloadtovaultLabel"> Transfer Reload to Vault</label>
+                </div>
+                <div><span id="115" style="color: rgb(17, 255, 0); font-size: 10pt;"></span></div>
+                <div><span id="195" style="color: rgb(17, 255, 0); font-size: 9pt;"></span></div>
+                <div><span id="116" style="color: rgb(17, 255, 0); font-size: 8pt;"></span></div>
+                <div><span id="xax" style="color: rgb(255, 6, 6); font-size: 10pt;"></span></div>
+                <div><span id="countdownTimer"></span></div>
+            </div>
+            <legend style="margin-top: 5px; font-weight: bold; color: rgb(129, 231, 153);">Uncheck if you dont want</legend>
+            <div style="border: 1px solid #ad7171; padding: 10px; border-radius: 5px;">
+                <div>
+                    <input type="checkbox" id="Daily1" checked>
+                    <label for="Daily1">1$ Daily</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Daily2" checked>
+                    <label for="Daily2">2$ Daily</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Daily3" checked>
+                    <label for="Daily3">3$ Daily</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Daily4" checked>
+                    <label for="Daily4">4$ Daily</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Daily5" checked>
+                    <label for="Daily5">5$ Daily</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Daily10" checked>
+                    <label for="Daily10">10$ Daily</label>
+                </div>
+            </div>
+            <div style="border: 1px solid #ad7171; padding: 10px; border-radius: 5px;">
+                <div>
+                    <input type="checkbox" id="highrbonus" checked>
+                    <label for="highrbonus">HighRoller</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Forum" checked>
+                    <label for="Forum">Forum Challenges</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Weekly" checked>
+                    <label for="Weekly">Weekly Bonus</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Monthly" checked>
+                    <label for="Monthly">Monthly Bonus</label>
+                </div>
+            </div>
+            <div style="border: 1px solid #ad7171; padding: 10px; border-radius: 5px;">
+                <div>
+                    <input type="checkbox" id="Mondb" checked>
+                    <label for="Mondb">Monday</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Tued" checked>
+                    <label for="Tued">Tuesday</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Wedd" checked>
+                    <label for="Wedd">Wednesday</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Thurd" checked>
+                    <label for="Thurd">Thursday</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Frid" checked>
+                    <label for="Frid">Friday</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Satd" checked>
+                    <label for="Satd">Saturday</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Sund" checked>
+                    <label for="Sund">Sunday</label>
+                </div>
+            </div>
+            <div style="border: 1px solid #ad7171; padding: 10px; border-radius: 5px;">
+                <div>
+                    <input type="checkbox" id="incomingcodes" checked>
+                    <label for="incomingcodes">Incoming Codes Notification</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="codeclaimnotification" checked>
+                    <label for="codeclaimnotification">Code Claim Notification</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="reloadnotifications" checked>
+                    <label for="reloadnotifications">Reload Claim Notification</label>
+                </div>
+            </div>
+        </div>
+        <div class="row-containerx">
+            <div id="bonusMessages" class="messages"></div>
+        </div>
+        <div class="row-containerx">
+            <div id="reloadMessages" class="messages"></div>
+        </div>
+        <div class="middle">
+            <div id="messages" style="margin-top: 0px;"></div>
+            <div id="viewMessage" class="viewMessage hidden"></div>
+            <div id="NotificationMessages" class="messages" style="margin-left: 0px;"></div>
+        </div>
+    </div>
+    <script src="lib/jquery.slim.min.js"></script>
+    <script src="lib/json-format-highlight.js"></script>
+    <script src="index.js"></script>
+    <script src="lib/versioncheck.js"></script>
+    <script src="lib/manualcodeclaim.js"></script>
+    <script src="lib/notifications.js"></script>
+    <script src="lib/workers.js"></script>
+
+</body>
+</html>
